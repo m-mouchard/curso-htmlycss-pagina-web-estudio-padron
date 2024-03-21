@@ -1,0 +1,176 @@
+/*lo que da el pequeño salto al recargar la página es padding o margin top, solo pero no right or left*/
+body {
+    background-color: black;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* así se ponen comentarios en CSS a diferencia de en html que se ponen <!-- --> */
+
+.cabecera {
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgb(83 79 0) 0%, rgb(0 0 0) 100%);
+    text-align: center;
+    padding: 20px; 
+    border-radius: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.menu li {
+    color: #ffffea;
+    background-color: #a90000;
+    border-radius: 10px;
+    padding: 15px;
+    display: inline-block;
+}
+
+.menu li:hover {
+    color: #ffffff; 
+    background-color: #bc6161; 
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.menu li a {
+    color: #ffffff; 
+    text-decoration: none;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 50px;
+    margin: 20px;
+    padding: 0px;
+    color: rgb(255, 255, 255);
+}
+
+h2 {
+    font-size: 20px;
+    margin: 10px;
+    padding: 0px;
+    color: rgb(255, 255, 255);
+}
+
+h3 {
+    font-size: 20px;
+    margin: 5px;
+    padding: 0px;
+    color: rgb(255, 255, 255);
+}
+
+.servicios-principales {
+    color: yellowgreen;
+}
+
+.boton {
+    background-color: rgba(70, 226, 9, 0.5);
+    border: none;
+    color: rgb(255, 255, 255);
+    padding: 15px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: rgba(72, 187, 27, 0.734);
+    color: rgb(129, 40, 40);
+}
+
+#menu {
+	background: #CC1212;
+	height: 53px;
+	border-radius: 10px;
+}
+#menu ul, #menu li {
+	margin: 0 auto;
+	padding: 0;
+	list-style: none
+}
+#menu ul {
+	width: 100%;
+	text-align: center;
+}
+#menu li {
+	display: inline-block;
+	position: relative;
+}
+#menu a {
+	display: block;
+	line-height: 53px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu a.dropdown-arrow:after {
+	content: "\25BE";
+	margin-left: 5px;
+}
+#menu li a:hover {
+	color: #FFFFFF;
+	background: #BC6161;
+}
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 53px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer
+}
+#menu label {
+	display: none;
+	line-height: 53px;
+	text-align: center;
+	position: absolute;
+	left: 35px
+}
+#menu label:before {
+	font-size: 1.6em;
+	color: #FFFFFF;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+#menu ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #CC1212;
+	position: absolute;
+	z-index: 99;
+	display: none;
+}
+#menu ul.sub-menus li {
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+#menu ul.sub-menus a {
+	color: #FFFFFF;
+	font-size: 16px;
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu ul.sub-menus a:hover{
+	background: #BC6161;
+	color: #FFFFFF;
+}
+
+@media screen and (max-width: 800px){
+	#menu {position:relative}
+	#menu ul {background:#CC1212;position:absolute;top:100%;right:0;left:0;z-index:3;height:auto;display:none;text-align:left;}
+	#menu ul.sub-menus {width:100%;position:static;}
+	#menu ul.sub-menus a {padding-left:30px;}
+	#menu li {display:block;float:none;width:auto;}
+	#menu input, #menu label {position:absolute;top:0;left:0;display:block}
+	#menu input {z-index:4}
+	#menu input:checked + label {color:#FFFFFF}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+}
